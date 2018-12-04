@@ -11,7 +11,7 @@ export default class Manage extends Component {
         image: '',
         search: ''
     }
-    
+
     // Get all books
     grabBook = async () => {
         await fetch('http://localhost:4000/book')
@@ -46,6 +46,10 @@ export default class Manage extends Component {
         event.preventDefault()
         this.search()
     }
+
+    // Image = () => {
+    //     <img src={book_image} />
+    // }
 
     render(){
         const bookName = this.state.book.map((book) => {
