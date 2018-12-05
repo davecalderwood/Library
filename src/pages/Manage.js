@@ -52,32 +52,33 @@ export default class Manage extends Component {
     // }
 
     render(){
-        const bookName = this.state.book.map((book) => {
+        const bookInfo = this.state.book.map((book) => {
             return (
             <div key={book._id}>
                 <div>
                     {book.book_title}<br/>
-                    {book.book_image}<br/>
+                    <img src={book.book_image} alt={book.book_title} width="250px" height="400px" ></img><br/>
                     {book.book_author}<br/>
                     {book.book_genre}
                 </div>
                 <div>
-                    <UpdateBook id={book._id} refresh={this.search}/>
-                    <DeleteBook id={book._id} refresh={this.search}/>
+                    <UpdateBook id={book._id} refresh={this.search} />
+                    <DeleteBook id={book._id} refresh={this.search} />
                 </div><br/>
             </div>
         )})
     return (
-    <div className="home parallax">
+    <div className="manage">
         <CreateBook />
             <form onSubmit={this.searcher} className="searchbar">
-                <input type="search" placeholder="What are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
+                <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
             </form>
             <div class="item">
-
-                <h2>{bookName}</h2>
-
+                <h2>{bookInfo}</h2>
             </div>
+            <div>.</div>
+            <div>.</div>
+            <div>.</div>
     </div>
         );
     }

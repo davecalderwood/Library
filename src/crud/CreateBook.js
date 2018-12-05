@@ -24,7 +24,7 @@ export default class CreateBook extends Component {
   url = 'http://localhost:4000/book';
 
   create = async (evt) => {
-    evt.preventDefault()
+    // evt.preventDefault()
       const result = await fetch(this.url, {
       method: 'POST', 
       body: JSON.stringify({
@@ -41,6 +41,7 @@ export default class CreateBook extends Component {
     .then(this.setState({showModal: false}))
     // .then(this.props.refresh())
     .catch(error => console.error('Error:', error));
+    this.handleCloseModal()
     console.log(result)
   }
 
@@ -68,7 +69,7 @@ export default class CreateBook extends Component {
                 <input type="text" placeholder="Book Genre" 
                 onChange={event => this.setState({book_genre: event.target.value})} required /><br/>
               </label><br/>
-                <input type="submit" value="Submit" />
+                <input className="button-3d" type="submit" value="Submit" />
               </center>
             </form>
           </ReactModal>

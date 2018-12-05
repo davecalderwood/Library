@@ -41,13 +41,14 @@ export default class UpdateBook extends Component {
     .then(this.setState({showModal: false}))
     // .then(this.props.refresh())
     .catch(error => console.error('Error:', error));
+    this.handleCloseModal()
     console.log(result)
   }
 
     render () {
       return (
         <div>
-          <button onClick={this.handleOpenModal}>Update book</button>
+          <button onClick={this.handleOpenModal}>Update Book</button>
           <ReactModal 
              isOpen={this.state.showModal}
              contentLabel="Update book"
@@ -66,7 +67,7 @@ export default class UpdateBook extends Component {
                       <input type="text" placeholder="Book Genre" 
                       onChange={event => this.setState({book_genre: event.target.value})} required /><br/>
                     </label><br/>
-                  <input type="submit" value="Submit" />
+                  <input className="button-3d" type="submit" value="Submit" />
                 </form>
             </center>
           </ReactModal>

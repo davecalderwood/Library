@@ -18,7 +18,6 @@ class App extends Component {
       {/* Create a basic framework for the site, I need a header with navigation, a footer with more navigaion */}
       {/* Hamburger menu with all of the navigation locations*/}     
         <div className="Header">
-          <div className="login">
           <nav role="navigation">
             <div id="menuToggle">
 
@@ -38,7 +37,6 @@ class App extends Component {
               </ul>
             </div>
           </nav>
-          </div>
           
         </div>
 

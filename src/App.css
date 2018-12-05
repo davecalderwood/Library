@@ -3,6 +3,7 @@
   width: 100%;
   position: absolute;
   min-height: 100%;
+  background-color: snow;
 }
 .Header {
   background-color: lightblue;
@@ -32,6 +33,9 @@
   text-decoration: none; color: black;
 }
 .Modal {
+  border: 5px solid black;
+  outline: none;
+  background-color: lightgray;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -40,12 +44,35 @@
   height: 400px;
 }
 input[type=text] {
+  border: 2px solid black;
   align-self: center;
   width: 50%;
   font-size: 1em;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+}
+.button-3d {
+  position:relative;
+  width: auto;
+  display:inline-block;
+  color:#ecf0f1;
+  text-decoration:none;
+  border-radius:5px;
+  border:solid 1px #b1c6ee;
+  background:#222fe6;
+
+  text-align:center;
+  font-size: 1.5em;
+  padding:16px 18px 14px;
+  margin: 12px;
+	transition: all 0.1s;
+  box-shadow: 0px 6px 0px #6b6cdd;
+}
+.button-3d:active {
+    box-shadow: 0px 2px 0px #d35400;
+    position:relative;
+    top:4px;
 }
 /* --------------------------------------------------- Menu -------------------------------------------------------------- */
 #menuToggle
@@ -165,7 +192,7 @@ input[type=search] {
   transition: all .5s;
 }
 input[type=search]:focus {
-	width: 450px;
+	width: 500px;
 	background-color: rgb(214, 212, 253);
 	border-color: #66CC75;
 	box-shadow: 0 0 5px rgba(109,207,246,.5);

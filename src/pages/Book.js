@@ -23,6 +23,7 @@ export default class Books extends Component {
 
     // Search for a specific book(s)
     search = async () => {
+        // If empty return all books
         if (this.state.search === ''){
             this.grabBook()
         }
@@ -45,12 +46,12 @@ export default class Books extends Component {
     }
 
     render(){
-        const bookName = this.state.book.map((book) => {
+        const bookInfo = this.state.book.map((book) => {
             return (
             <div key={book._id}>
                 <div>
                     {book.book_title}<br/>
-                    {book.book_image}<br/>
+                    <img src={book.book_image} alt={book.book_title} width="250px" height="400px" ></img><br/>
                     {book.book_author}<br/>
                     {book.book_genre}
                 </div><br/>
@@ -61,11 +62,14 @@ export default class Books extends Component {
     return (
     <div className="home">
             <form onSubmit={this.searcher} className="searchbar">
-                <input type="search" placeholder="What are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
+                <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
             </form>
             <div class="item">
-                <h2>{bookName}</h2>
+                <h2>{bookInfo}</h2>
             </div>
+            <div>.</div>
+            <div>.</div>
+            <div>.</div>
     </div>
         );
     }
