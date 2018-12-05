@@ -3,7 +3,7 @@
   width: 100%;
   position: absolute;
   min-height: 100%;
-  background-color: snow;
+  background-color: rgb(240, 240, 240);
 }
 .Header {
   background-color: lightblue;
@@ -51,6 +51,21 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+}
+.styles {
+  outline: none;
+  cursor: pointer;
+  width: 200px;
+  height: 40px;
+  border: 2px solid black;
+  box-shadow: 5px 10px #888888;
+  font-size: 1em;
+  font-weight: bold;
+}
+.styles:active {
+  background-color: snow;
+  box-shadow: 0 7px #666;
+  transform: translateY(6px), translateX(2px);
 }
 .button-3d {
   position:relative;
@@ -175,7 +190,7 @@ form {
 	margin: 10px;
 }
 input {
-	outline: none;
+  outline: none;
 }
 
 input[type=search] {

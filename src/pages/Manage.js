@@ -62,23 +62,23 @@ export default class Manage extends Component {
                     {book.book_genre}
                 </div>
                 <div>
-                    <UpdateBook id={book._id} refresh={this.search} />
-                    <DeleteBook id={book._id} refresh={this.search} />
+                    <UpdateBook id={book._id} refresh={this.search} /><br/>
+                    <DeleteBook id={book._id} title={book.book_title} refresh={this.search} />
                 </div><br/>
             </div>
         )})
     return (
-    <div className="manage">
-        <CreateBook />
+    <div>
+        <CreateBook /><br/>
             <form onSubmit={this.searcher} className="searchbar">
                 <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
             </form>
             <div class="item">
                 <h2>{bookInfo}</h2>
             </div>
-            <div>.</div>
-            <div>.</div>
-            <div>.</div>
+        <div>.</div>
+        <div>.</div>
+        <div>.</div>
     </div>
         );
     }

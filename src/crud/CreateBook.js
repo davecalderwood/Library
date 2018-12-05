@@ -48,7 +48,7 @@ export default class CreateBook extends Component {
     render () {
       return (
         <div>
-          <button onClick={this.handleOpenModal}>Add Book</button>
+          <button className="styles" onClick={this.handleOpenModal}>Add Book</button>
           <ReactModal 
              isOpen={this.state.showModal}
              contentLabel="Add Book"

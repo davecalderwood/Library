@@ -14,6 +14,7 @@ export default class DeleteBook extends Component {
       }
       handleOpenModal = () => {
         this.setState({ showModal: true });
+        console.log(this.state)
       }
       
       handleCloseModal = () => {
@@ -38,11 +39,8 @@ export default class DeleteBook extends Component {
 
     render() {
         return (
-            // <form onSubmit={this.delete}>
-            //     <button>Delete</button>
-            // </form>
         <div>
-          <button onClick={this.handleOpenModal}>Delete Book</button>
+          <button className="styles" onClick={this.handleOpenModal}>Delete Book</button>
           <ReactModal 
              isOpen={this.state.showModal}
              contentLabel="Delete book"
@@ -50,7 +48,7 @@ export default class DeleteBook extends Component {
           >
             <button onClick={this.handleCloseModal}>X</button>
             <center>
-                <h2>Are you sure you want to delete this item?</h2>
+                <h2>Are you sure you want to delete: <br/><br/>{this.props.title}</h2>
                 <form onSubmit={this.delete}>
                     <button className="button-3d" type="submit">Yes I want to Delete</button><br/><br/>
                     <button className="button-3d" onClick={this.handleCloseModal} >No I don't want to</button>

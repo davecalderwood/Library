@@ -48,7 +48,7 @@ export default class UpdateBook extends Component {
     render () {
       return (
         <div>
-          <button onClick={this.handleOpenModal}>Update Book</button>
+          <button className="styles" onClick={this.handleOpenModal}>Update Book</button>
           <ReactModal 
              isOpen={this.state.showModal}
              contentLabel="Update book"
