@@ -7,7 +7,7 @@ export default class DeleteBook extends Component {
         this.state = {
         //   book_title: '',
         //   book_image: '',
-        //   book_genre: '',
+        //   book_series: '',
         //   book_author: '',
           showModal: false,
         };

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+// import Drop from '../components/Dropdown';
 
 export default class Books extends Component {
     state = {
         book: [],
-        genre: '',
+        series: '',
         image: '',
         author: '',
         search: ''
@@ -32,11 +33,9 @@ export default class Books extends Component {
         }
             else {
                 const trimmed = this.state.search.replace(/\s/, "")
-                console.log(trimmed)
                 await fetch(`http://localhost:4000/book/name/${trimmed}`)
                     .then(res => res.json())
                     .then(data => this.setState({ book: data }))
-                console.log("search: ", this.state.book)
             }
     }
     // searcher refreshes the page after deletion
@@ -48,28 +47,37 @@ export default class Books extends Component {
     render(){
         const bookInfo = this.state.book.map((book) => {
             return (
-            <div key={book._id}>
-                <div>
-                    {book.book_title}<br/>
-                    <img src={book.book_image} alt={book.book_title} width="250px" height="400px" ></img><br/>
-                    {book.book_author}<br/>
-                    {book.book_genre}
-                </div><br/>
-                <div>
+            <div key={book._id} className="column">
+                {book.book_series}<br/>
+                {book.book_title}<br/>
+
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src={book.book_image} 
+                        alt={book.book_title} 
+                        width="250px" height="400px" 
+                        ></img><br/>
+                    </div>
+                        <div className="flip-box-back">
+                        {book.book_desc}
+                        </div>
+                    </div>
                 </div>
+
+                {book.book_author}<br/>
+                    
             </div>
         )})
     return (
     <div className="home">
             <form onSubmit={this.searcher} className="searchbar">
-                <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
+                <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}
+                /><br/>
             </form>
             <div class="item">
                 <h2>{bookInfo}</h2>
             </div>
-            <div>.</div>
-            <div>.</div>
-            <div>.</div>
     </div>
         );
     }

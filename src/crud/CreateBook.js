@@ -6,7 +6,7 @@ export default class CreateBook extends Component {
       super(props);
       this.state = {
         book_title: '',
-        book_genre: '',
+        book_series: '',
         book_image: '',
         book_author: '',
         showModal: false,
@@ -31,7 +31,7 @@ export default class CreateBook extends Component {
         book_title: this.state.book_title,
         book_image: this.state.book_image,
         book_author: this.state.book_author,
-        book_genre: this.state.book_genre,
+        book_series: this.state.book_series,
       }),
     })
     .then(console.log(this.data))
@@ -56,18 +56,19 @@ export default class CreateBook extends Component {
           >
             <button onClick={this.handleCloseModal}>X</button>
 
-            {/* title, image, author, genre */}
             <form className="addForm" onSubmit={this.create}>
             <center>
               <label>
+                <input type="text" placeholder="Book Series" 
+                onChange={event => this.setState({book_series: event.target.value})} required /><br/>
                 <input type="text" placeholder="Book Name" 
                 onChange={event => this.setState({book_title: event.target.value})} required /><br/>
                 <input type="text" placeholder="Book Image" 
                 onChange={event => this.setState({book_image: event.target.value})} required /><br/>
                 <input type="text" placeholder="Author" 
                 onChange={event => this.setState({book_author: event.target.value})} required /><br/>
-                <input type="text" placeholder="Book Genre" 
-                onChange={event => this.setState({book_genre: event.target.value})} required /><br/>
+                <textarea type="textarea" cols="40" rows="5" defaultValue={this.state.book_desc} className="description"
+                onChange={event => this.setState({book_desc: event.target.value})} required /><br/>
               </label><br/>
                 <input className="button-3d" type="submit" value="Submit" />
               </center>

@@ -7,9 +7,10 @@ import UpdateBook from '../crud/UpdateBook';
 export default class Manage extends Component {
     state = {
         book: [],
-        genre: '',
+        series: '',
         image: '',
-        search: ''
+        search: '',
+        desc: '',
     }
 
     // Get all books
@@ -54,15 +55,26 @@ export default class Manage extends Component {
     render(){
         const bookInfo = this.state.book.map((book) => {
             return (
-            <div key={book._id}>
+            <div key={book._id} className="column">
                 <div>
+                    {book.book_series}<br/>
                     {book.book_title}<br/>
-                    <img src={book.book_image} alt={book.book_title} width="250px" height="400px" ></img><br/>
-                    {book.book_author}<br/>
-                    {book.book_genre}
+                        <img src={book.book_image}
+                        alt={book.book_title} 
+                        width="250px" height="400px" 
+                        ></img><br/>
+                    {book.book_author}<br/><br/>
                 </div>
                 <div>
-                    <UpdateBook id={book._id} refresh={this.search} /><br/>
+                    <UpdateBook 
+                        book_series={book.book_series} 
+                        book_title={book.book_title}
+                        book_image={book.book_image}
+                        book_author={book.book_author}
+                        book_desc={book.book_desc}
+                        id={book._id} 
+                        refresh={this.search}
+                    /><br/>
                     <DeleteBook id={book._id} title={book.book_title} refresh={this.search} />
                 </div><br/>
             </div>
@@ -76,9 +88,6 @@ export default class Manage extends Component {
             <div class="item">
                 <h2>{bookInfo}</h2>
             </div>
-        <div>.</div>
-        <div>.</div>
-        <div>.</div>
     </div>
         );
     }
