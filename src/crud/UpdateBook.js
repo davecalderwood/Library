@@ -69,7 +69,7 @@ export default class UpdateBook extends Component {
                       <input type="text" defaultValue={this.state.book_author}
                       onChange={event => this.setState({book_author: event.target.value})} required /><br/>
                       <textarea type="textarea" cols="40" rows="5" defaultValue={this.state.book_desc} className="description"
-                      onChange={event => this.setState({book_desc: event.target.value})} required /><br/>
+                      onChange={event => this.setState({book_desc: event.target.value})} required placeholder="Book Description" /><br/>
                     </label><br/>
                   <input className="button-3d" type="submit" value="Submit" />
                 </form>

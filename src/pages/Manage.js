@@ -57,13 +57,14 @@ export default class Manage extends Component {
             return (
             <div key={book._id} className="column">
                 <div>
-                    {book.book_series}<br/>
+                    <h2>{book.book_series}<br/>
                     {book.book_title}<br/>
                         <img src={book.book_image}
                         alt={book.book_title} 
-                        width="250px" height="400px" 
+                        width="350px" 
+                        height="500px" 
                         ></img><br/>
-                    {book.book_author}<br/><br/>
+                    {book.book_author}<br/><br/></h2>
                 </div>
                 <div>
                     <UpdateBook 
@@ -76,7 +77,7 @@ export default class Manage extends Component {
                         refresh={this.search}
                     /><br/>
                     <DeleteBook id={book._id} title={book.book_title} refresh={this.search} />
-                </div><br/>
+                </div><br/><hr/>
             </div>
         )})
     return (
@@ -86,7 +87,7 @@ export default class Manage extends Component {
                 <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
             </form>
             <div class="item">
-                <h2>{bookInfo}</h2>
+                {bookInfo}<br/>
             </div>
     </div>
         );

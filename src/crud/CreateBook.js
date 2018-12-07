@@ -9,6 +9,7 @@ export default class CreateBook extends Component {
         book_series: '',
         book_image: '',
         book_author: '',
+        book_desc: '',
         showModal: false,
       };
     }
@@ -32,6 +33,7 @@ export default class CreateBook extends Component {
         book_image: this.state.book_image,
         book_author: this.state.book_author,
         book_series: this.state.book_series,
+        book_desc: this.state.book_desc,
       }),
     })
     .then(console.log(this.data))
@@ -68,7 +70,7 @@ export default class CreateBook extends Component {
                 <input type="text" placeholder="Author" 
                 onChange={event => this.setState({book_author: event.target.value})} required /><br/>
                 <textarea type="textarea" cols="40" rows="5" defaultValue={this.state.book_desc} className="description"
-                onChange={event => this.setState({book_desc: event.target.value})} required /><br/>
+                onChange={event => this.setState({book_desc: event.target.value})} required placeholder="Book Description" /><br/>
               </label><br/>
                 <input className="button-3d" type="submit" value="Submit" />
               </center>

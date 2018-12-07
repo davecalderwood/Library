@@ -48,7 +48,7 @@ export default class Books extends Component {
         const bookInfo = this.state.book.map((book) => {
             return (
             <div key={book._id} className="column">
-                {book.book_series}<br/>
+                <h2>{book.book_series}<br/>
                 {book.book_title}<br/>
 
                 <div class="flip-box">
@@ -56,7 +56,8 @@ export default class Books extends Component {
                     <div class="flip-box-front">
                         <img src={book.book_image} 
                         alt={book.book_title} 
-                        width="250px" height="400px" 
+                        width="350px" 
+                        height="500px" 
                         ></img><br/>
                     </div>
                         <div className="flip-box-back">
@@ -65,7 +66,7 @@ export default class Books extends Component {
                     </div>
                 </div>
 
-                {book.book_author}<br/>
+                {book.book_author}</h2><hr/>
                     
             </div>
         )})
@@ -76,7 +77,7 @@ export default class Books extends Component {
                 /><br/>
             </form>
             <div class="item">
-                <h2>{bookInfo}</h2>
+                {bookInfo}
             </div>
     </div>
         );
