@@ -15,7 +15,7 @@ export default class About extends Component {
 
                 <p className="story">I absolutly love to read, which is what drove me to create this website for myself. I have always wanted to have an enormous library in my home and this will help me track which ones I have. My favorite books are The Lord of the Rings by J.R.R. Tolkien. </p>
 
-                <p className="story">Fantasy books are my favorite as they allow me to escape reality and get pulled into another world. The way Larry Correia pulls you into his world in the Saga of the Forgotten Warrior is wonderful. You fear and root for the characters.</p>
+                <p className="story">Fantasy books are my favorite as they allow me to escape reality and get pulled into another world. J.R.R. Tolkien, Larry Correia, George R.R. Martin and J.K. Rowling are some of my favorites.</p>
             </div>
         </div>
     )
