@@ -48,10 +48,6 @@ export default class Manage extends Component {
         this.search()
     }
 
-    // Image = () => {
-    //     <img src={book_image} />
-    // }
-
     render(){
         const bookInfo = this.state.book.map((book) => {
             return (
@@ -81,7 +77,7 @@ export default class Manage extends Component {
             </div>
         )})
     return (
-    <div>
+    <div className="manageBooks">
         <CreateBook /><br/>
             <form onSubmit={this.searcher} className="searchbar">
                 <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>

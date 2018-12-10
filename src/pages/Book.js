@@ -71,7 +71,8 @@ export default class Books extends Component {
             </div>
         )})
     return (
-    <div className="home">
+    <div className="book">
+        <div className="filler">filler</div>
             <form onSubmit={this.searcher} className="searchbar">
                 <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}
                 /><br/>

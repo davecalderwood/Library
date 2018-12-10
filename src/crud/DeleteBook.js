@@ -46,7 +46,7 @@ export default class DeleteBook extends Component {
              contentLabel="Delete book"
              className="Modal"
           >
-            <button onClick={this.handleCloseModal}>X</button>
+            <button onClick={this.handleCloseModal}>X</button><br/>
             <center>
                 <h2>Are you sure you want to delete: <br/><br/>{this.props.title}</h2>
                 <form onSubmit={this.delete}>
