@@ -62,7 +62,7 @@ export default class CreateBook extends Component {
             <center>
               <label>
                 <input type="text" placeholder="Book Series" 
-                onChange={event => this.setState({book_series: event.target.value})} required /><br/>
+                onChange={event => this.setState({book_series: event.target.value})} /><br/>
                 <input type="text" placeholder="Book Name" 
                 onChange={event => this.setState({book_title: event.target.value})} required /><br/>
                 <input type="text" placeholder="Book Image" 

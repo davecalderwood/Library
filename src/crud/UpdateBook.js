@@ -61,7 +61,7 @@ export default class UpdateBook extends Component {
                 <form className="addForm" onSubmit={this.update}>
                   <label>
                       <input type="text" defaultValue={this.props.book_series}
-                      onChange={event => this.setState({book_series: event.target.value})} required /><br/>
+                      onChange={event => this.setState({book_series: event.target.value})} /><br/>
                       <input type="text" defaultValue={this.state.book_title}
                       onChange={event => this.setState({book_title: event.target.value})} required /><br/>
                       <input type="text" defaultValue={this.state.book_image}

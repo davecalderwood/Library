@@ -15,6 +15,7 @@ class App extends Component {
 
       <Router>
       <div className="App">
+      
       {/* Create a basic framework for the site, I need a header with navigation, a footer with more navigaion */}
       {/* Hamburger menu with all of the navigation locations*/}     
         <div className="Header">

@@ -47,7 +47,7 @@ export default class Books extends Component {
     render(){
         const bookInfo = this.state.book.map((book) => {
             return (
-            <div key={book._id} className="column">
+            <div key={book._id} className="column parallax">
                 <h2>{book.book_series}<br/>
                 {book.book_title}<br/>
 
@@ -71,7 +71,7 @@ export default class Books extends Component {
             </div>
         )})
     return (
-    <div className="book">
+    <div className="book parallax">
         <div className="filler">filler</div>
             <form onSubmit={this.searcher} className="searchbar">
                 <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}
