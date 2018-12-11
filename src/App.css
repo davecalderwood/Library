@@ -8,7 +8,7 @@
 
 }
 .Header {
-  background-color: rgb(112, 127, 216);
+  background-color: rgb(72, 70, 99);
   width: 100%;
   height: 80px;
   top: 0;
@@ -19,8 +19,7 @@
   right: 670px;
 }
 .footer {
-  background-color: rgb(112, 127, 216);
-  /* position: fixed; */
+  background-color: rgb(78, 90, 114);
   left: 0;
   bottom: 0;
   flex-direction: row;
@@ -32,7 +31,7 @@
   justify-content: space-around;
 }
 .about, .contact, .videos, a {
-  text-decoration: none; color: black;
+  text-decoration: none; color: white;
   font-size: 25px;
 }
 .Modal {
@@ -138,6 +137,22 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.parallax2 {
+  /* The image used */
+  background-image: url('https://cdn-images-1.medium.com/max/2000/1*42ebJizcUtZBNIZPmmMZ5Q.jpeg');
+  background-repeat: no-repeat;
+
+  /* Full height */
+  height: 100%; 
+  /* width: 100%; */
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .home {
   height: 865px;
   background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
@@ -148,11 +163,17 @@ input {
 .filler {
   color: transparent;
 }
-.book {
-  /* background-color: rgb(159, 187, 159); */
-}
 .manageBooks {
-  background-color: lightcyan;
+  color: rgb(255, 255, 255);
+}
+.card {
+  border: 1px solid black;
+  width: 30%;
+  flex-direction: row;
+}
+.linkedin {
+  color: black;
+  font-size: 1em;
 }
 /* --------------------------------------------------- Menu -------------------------------------------------------------- */
 #menuToggle
@@ -185,7 +206,7 @@ input {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #000000;
+  background: #ffffff;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -310,7 +331,7 @@ input[type=search]:focus {
   color: white;
   transform: rotateY(180deg);
 }
-/* ------------------------------------------------------------------ Welcome ------------------------------------------------------------------- */
+/* -------------------------------------------------- Welcome Text Bouncing ------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css?family=Chewy');
 
 .welcome {
@@ -335,27 +356,45 @@ text-shadow:
   75%{transform: scale(1,1.5) translate(0px, 60px)}
   100% {transform: scale(1,1) translate(0px, 0px)}
 }
-/* --------------------------------------------------- Bounce Animation -------------------------------------------------------------------- */
-.box {
-  margin: 0 auto;
-  position: relative;
-  box-shadow: inset 0 0 3px #000;
+/* --------------------------------------------------- Contact ------------------------------------------------------- */
+.contactPage {
+  background-image: url('https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 850px;
 }
-.box b {
-  text-align: center;
-  color: white;  
-  display: block;
-  width: 50px;
-  height: 50px;
-  border-radius: 15%;
-  background-color: #34bb2f;
-  box-shadow: inset -5px -5px 5px rgba(0,0,0,.9), 15px 15px 2px rgba(0,0,0,.2);
+.center{
   position: absolute;
-  animation: moveX 6.7s linear 0s infinite alternate, moveY 4.4s linear 0s infinite alternate;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
 }
-@keyframes moveX {
-  from { left: 0; } to { left: 1760px; }
+.page{
+  width:550px;
+  height:800px;
+  padding:30px;
+  background:rgb(167, 140, 140);
+  border-left:20px solid #ff2929;
+  transform: rotate(-25deg) skewX(12deg) scale(.8);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
 }
-@keyframes moveY {
-  from { top: 0; } to { top: 810px; }
+.page:before{
+  content:'';
+  width:30px;
+  height:100%;
+  background:#8a0e0e;
+  position: absolute;
+  top:0;
+  left:0;
+  transform: skewy(-45deg) translate(-50px,-36px);
+}
+.page:after{
+  content:'';
+  width:105%;
+  height:30px;
+  background:rgb(204, 204, 204);
+  position: absolute;
+  top:100%;
+  left:-6%;
+  transform: skew(-45deg)
 }

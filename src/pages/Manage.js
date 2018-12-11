@@ -51,7 +51,7 @@ export default class Manage extends Component {
     render(){
         const bookInfo = this.state.book.map((book) => {
             return (
-            <div key={book._id} className="column">
+            <div key={book._id} className="column parallax2">
                 <div>
                     <h2>{book.book_series}<br/>
                     {book.book_title}<br/>
@@ -77,7 +77,7 @@ export default class Manage extends Component {
             </div>
         )})
     return (
-    <div className="manageBooks">
+    <div className="manageBooks parallax2">
         <CreateBook /><br/>
             <form onSubmit={this.searcher} className="searchbar">
                 <input type="search" placeholder="What book are you looking for?" onChange={event => this.setState({search: event.target.value})}/><br/>
