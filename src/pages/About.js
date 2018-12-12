@@ -12,7 +12,7 @@ export default class About extends Component {
                 <p className="title">My story</p>
                 <p className="story">Born in Walnut Creek, California on October 29, 1995. We Moved to Portland, Oregon when I was 1 and that is where I grew up. I grew up playing Lacrosse and Football. I love to wakeboard, waterski and snowboard. I graduated high-school in 2014 and moved to Utah to attend school at Utah Valley University</p>
 
-                <p className="story">At UVU I studied History, Physics and spent most of my time as an Aviation Science major. I left UVU after not being able to get my medical cleared from the FAA and went to Helio Training, on the suggestion from a friend, to become a web developer. I have always had a fascination with computer science and I wanted to get the skills necessary to get a job as a developer.</p>
+                <p className="story">At UVU I studied History, Physics and spent most of my time as an Aviation Science major. I left UVU after not being able to get my medical cleared from the FAA and, on the suggestion from a friend, went to Helio Training to become a web developer. I have always had a fascination with computer science and I wanted to get the skills necessary to get a job as a developer.</p>
 
                 <p className="story">I absolutly love to read, which is what drove me to create this website for myself. I have always wanted to have an enormous library in my home and this will help me track which ones I have. My favorite books are The Lord of the Rings by J.R.R. Tolkien. </p>
 

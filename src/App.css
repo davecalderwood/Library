@@ -10,7 +10,7 @@
 .Header {
   background-color: rgb(72, 70, 99);
   width: 100%;
-  height: 80px;
+  height: 60px;
   top: 0;
 }
 .return {
@@ -175,12 +175,17 @@ input {
   color: black;
   font-size: 1em;
 }
+.email {
+  color: black;
+  font-size: 40px;
+  font-family: fantasy;
+}
 /* --------------------------------------------------- Menu -------------------------------------------------------------- */
 #menuToggle
 {
   display: block;
   position: relative;
-  top: 30px;
+  top: 20px;
   left: 20px;
   z-index: 1;
   -webkit-user-select: none;
@@ -363,13 +368,13 @@ text-shadow:
   background-size: cover;
   height: 850px;
 }
-.center{
+.center {
   position: absolute;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
 }
-.page{
+.page {
   width:550px;
   height:800px;
   padding:30px;
@@ -378,7 +383,7 @@ text-shadow:
   transform: rotate(-25deg) skewX(12deg) scale(.8);
   box-shadow: -50px 50px 50px rgba(0,0,0,.5);
 }
-.page:before{
+.page:before {
   content:'';
   width:30px;
   height:100%;
@@ -388,7 +393,7 @@ text-shadow:
   left:0;
   transform: skewy(-45deg) translate(-50px,-36px);
 }
-.page:after{
+.page:after {
   content:'';
   width:105%;
   height:30px;
