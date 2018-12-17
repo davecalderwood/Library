@@ -5,6 +5,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Manage from './pages/Manage';
+import Login from './containers/Login';
 import './App.css';
 
 
@@ -48,6 +49,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/manage" component={Manage} />
+          <Route path="/login" exact component={Login} />
         
         </div>
 
