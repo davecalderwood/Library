@@ -41,6 +41,15 @@ class App extends Component {
           </nav>
           
         </div>
+        <div class="topnav">
+          <div class="login-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Username" name="username" />
+              <input type="password" placeholder="Password" name="psw" />
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
 
         <div className="main">
           {/* Route paths */}
